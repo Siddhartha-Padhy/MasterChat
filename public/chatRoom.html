@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MasterChat</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <section class="participants">
+        <header class="chatRoomHeader">
+          <h3 class="logo-text">
+            Master
+            <span style="color: #ff3333; margin: 0; padding: 0;">Chat</span>
+            <br />
+            <i class="fa fa-users" aria-hidden="true" style="color: green;"></i>
+            <span id="room"></span>
+          </h3>
+        </header>
+        <h3 style="margin: 2vh 2vw;">Current Participants</h3>
+        <ul id="participants"></ul>
+      </section>
+      <section class="messages-panel">
+        <div>
+          <div class="messages-section" id="message-section"></div>
+          <br />
+          <br />
+        </div>
+        <div class="input-message-section">
+          <input
+            type="text"
+            placeholder="Message"
+            id="input-message"
+            autofocus
+          />
+          <button onclick="send_message()">
+            <i class="fas fa-paper-plane"></i>
+            Send
+          </button>
+        </div>
+      </section>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
