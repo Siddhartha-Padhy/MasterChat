@@ -1,10 +1,11 @@
 {
-  "name": "MasterChat",
+  "name": "master-chat",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A room based chat app built with express and socket.io",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "siddhartha",
   "license": "ISC",
